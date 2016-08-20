@@ -26098,7 +26098,7 @@ var About = React.createClass({displayName: "About",
 					"Hello, People!"
 				), 
         React.createElement("h3", null, 
-        "This is Gmail"
+        "This is WeatherApi"
         ), 
 				React.createElement("p", null, 
 					"This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique."
@@ -26360,19 +26360,9 @@ return (
 module.exports=Database2;
 },{"react":235}],244:[function(require,module,exports){
 var React=require("react");
-//var Weather1=require('./Weather1');
-//var GmailRightBox1=require('./GmailRightBox1');
-//var Compose=require('./Compose');
-
-
 var {Router, Route, browserHistory }=require('react-router');
-//var About=require('./About');
-//var ContactUs=require('./ContactUs');
-//var App=require('./Index');
 var Weather = React.createClass({displayName: "Weather",
-getInitialState: function() {
-   return ({data: []});
- },
+
 getWeather: function()
     {
 
@@ -26384,8 +26374,7 @@ getWeather: function()
          success: function(data)
          {
            console.log("nikita");
-          //console.log(JSON.stringify(data));
-           this.setState({data:data});
+
           var pressure=JSON.stringify(data.main.pressure);
           var humidity=JSON.stringify(data.main.humidity);
           var sunrise=JSON.stringify(data.sys.sunrise);
@@ -26456,9 +26445,6 @@ var mainComponent = React.createClass({displayName: "mainComponent",
   }
 })
 
-
-
-//ReactDOM.render(<GmailBox/>,document.getElementById('app'));
 ReactDOM.render((React.createElement(Router, {history: browserHistory}, 
   React.createElement(Route, {path: "/", component: mainComponent}, 
     React.createElement(Route, {path: "/About", component: About}), 

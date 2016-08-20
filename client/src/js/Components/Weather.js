@@ -1,17 +1,7 @@
 var React=require("react");
-//var Weather1=require('./Weather1');
-//var GmailRightBox1=require('./GmailRightBox1');
-//var Compose=require('./Compose');
-
-
 var {Router, Route, browserHistory }=require('react-router');
-//var About=require('./About');
-//var ContactUs=require('./ContactUs');
-//var App=require('./Index');
 var Weather = React.createClass({
-getInitialState: function() {
-   return ({data: []});
- },
+
 getWeather: function()
     {
 
@@ -23,8 +13,7 @@ getWeather: function()
          success: function(data)
          {
            console.log("nikita");
-          //console.log(JSON.stringify(data));
-           this.setState({data:data});
+
           var pressure=JSON.stringify(data.main.pressure);
           var humidity=JSON.stringify(data.main.humidity);
           var sunrise=JSON.stringify(data.sys.sunrise);

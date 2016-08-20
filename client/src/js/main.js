@@ -17,9 +17,6 @@ var mainComponent = React.createClass({
   }
 })
 
-
-
-//ReactDOM.render(<GmailBox/>,document.getElementById('app'));
 ReactDOM.render((<Router history={browserHistory}>
   <Route path="/" component={mainComponent}>
     <Route path="/About" component={About}/>
